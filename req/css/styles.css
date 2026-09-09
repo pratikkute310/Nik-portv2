@@ -1298,16 +1298,44 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
     opacity: 0; transform: translateY(-8px) scale(0.98); pointer-events: none;
     transition: opacity var(--dur-2) var(--ease-out), transform var(--dur-3) var(--ease-out);
   }
-  .nav { position: relative; }
-  /* the links leave the flex row here (absolute dropdown), taking the
-     auto-margin spacer with them — re-anchor the controls to the edge */
-  .nav__right { margin-left: auto; }
+  .site-header { padding-inline: 0.75rem; }
+  .nav {
+    position: relative;
+    justify-content: space-between;
+    gap: 0.45rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0.28rem 0.85rem 0.28rem 0.55rem;
+  }
+  .site-header.is-scrolled .nav { max-width: 100%; }
+  .brand { min-width: 0; flex: 1 1 auto; overflow: hidden; }
+  .brand__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.88rem;
+  }
+  .nav__cta { display: none; }
+  .nav__right { margin-left: 0; gap: 0.1rem; flex: 0 0 auto; }
+  .theme-toggle,
+  .nav__toggle {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .theme-toggle:hover,
+  .nav__toggle:hover {
+    border-color: transparent;
+    background: transparent;
+    color: var(--accent);
+  }
   .nav.is-open .nav__links { opacity: 1; transform: none; pointer-events: auto; }
   .nav__link { padding: 0.75rem 0.9rem; font-size: 0.95rem; }
   .nav__link.is-active::before { display: none; }
   .nav__link.is-active { background: var(--surface-2); }
   .nav__toggle { display: block; }
-  .site-header.is-scrolled .nav { max-width: var(--container); }
   .nav__status .clock { display: none; }
   .hero__canvas { mask-image: radial-gradient(140% 90% at 50% 25%, #000 28%, transparent 88%); -webkit-mask-image: radial-gradient(140% 90% at 50% 25%, #000 28%, transparent 88%); opacity: 0.82; }
   .hero__eyebrow::before { display: none; }
@@ -1331,7 +1359,8 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
   .cursor { display: none; }
 }
 @media (max-width: 560px) {
-  .nav__cta { display: none; }
+  .site-header { padding-inline: 0.6rem; }
+  .nav { padding: 0.26rem 0.8rem 0.26rem 0.5rem; }
   .brand__name .role { display: none; }
   .pipeline__track { left: 10%; right: 10%; }
   .stage__label { font-size: 0.58rem; }
