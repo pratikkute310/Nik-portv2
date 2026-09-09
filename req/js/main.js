@@ -75,7 +75,7 @@
     if (themeBtn) themeBtn.setAttribute('aria-label', t === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
     window.dispatchEvent(new CustomEvent('themechange'));
   }
-  applyTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'dark', false);
   if (themeBtn) themeBtn.addEventListener('click', function () {
     var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     if (!reduce) {
@@ -173,11 +173,33 @@
     });
   }
   var decoded = false;
+  function watchGitGraph() {
+    var graph = $('.hero__graph');
+    if (!graph) return;
+    function play() {
+      if (reduce) { graph.classList.add('is-in'); return; }
+      graph.classList.remove('is-in');
+      void graph.offsetWidth;
+      graph.classList.add('is-in');
+    }
+    if (!('IntersectionObserver' in window)) { play(); return; }
+    var ready = false;
+    var gObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) { ready = false; return; }
+        if (ready) return;
+        ready = true;
+        play();
+      });
+    }, { threshold: 0.28, rootMargin: '0px 0px -10% 0px' });
+    gObs.observe(graph);
+  }
   function heroIn() {
     if (decoded) return; decoded = true;
     var hero = $('#hero') || $('.hero') || $('#home');
     if (hero) hero.classList.add('is-in');
     runDecodes();
+    watchGitGraph();
   }
   document.addEventListener('preloader:done', heroIn);
   // Fallbacks: preloader already gone, or something stalled.
