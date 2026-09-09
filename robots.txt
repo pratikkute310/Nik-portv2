@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikita-deshmukh.github.io/sitemap.xml
