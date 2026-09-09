@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikita Deshmukh — Resume</title>
+<meta name="description" content="Resume of Nikita Deshmukh, Cloud & DevOps Engineer.">
+<link rel="icon" href="req/img/fav/favicon.svg?v=2" type="image/svg+xml">
+<style>
+  :root {
+    --ink: #111418;
+    --muted: #4b5563;
+    --line: #d7dde3;
+    --accent: #0d7a4e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: #f4f6f5;
+    font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+  }
+  .wrap {
+    max-width: 820px;
+    margin: 1.5rem auto 3rem;
+    padding: 2rem 2.1rem 2.4rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 40px -28px rgba(0,0,0,0.35);
+  }
+  header { border-bottom: 2px solid var(--accent); padding-bottom: 1rem; margin-bottom: 1.2rem; }
+  h1 { margin: 0 0 0.2rem; font-size: 1.85rem; letter-spacing: -0.03em; }
+  .title { margin: 0; color: var(--accent); font-weight: 650; }
+  .meta { margin: 0.55rem 0 0; color: var(--muted); font-size: 0.9rem; }
+  .meta a { color: inherit; }
+  h2 {
+    margin: 1.25rem 0 0.45rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h3 { margin: 0.85rem 0 0.15rem; font-size: 1rem; }
+  .row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; color: var(--muted); font-size: 0.88rem; }
+  p, li { color: #1f2933; }
+  p { margin: 0.35rem 0; }
+  ul { margin: 0.25rem 0 0.2rem; padding-left: 1.15rem; }
+  li { margin: 0.22rem 0; }
+  .chips { color: var(--muted); font-size: 0.88rem; }
+  .back { display: inline-block; margin: 1rem 0 0 1.2rem; color: var(--accent); font-size: 0.9rem; }
+  @media print {
+    body { background: #fff; }
+    .wrap { margin: 0; border: 0; box-shadow: none; max-width: none; padding: 0; }
+    .back { display: none; }
+  }
+</style>
+</head>
+<body>
+  <a class="back" href="index.html">← Back to portfolio</a>
+  <a class="back" href="req/Nikita-Deshmukh-Resume.pdf" target="_blank" rel="noopener">View PDF</a>
+  <main class="wrap">
+    <header>
+      <h1>Nikita Deshmukh</h1>
+      <p class="title">Cloud &amp; DevOps Engineer</p>
+      <p class="meta">
+        Pune, Maharashtra, India
+        · <a href="mailto:deshmukhnikita2001@gmail.com">deshmukhnikita2001@gmail.com</a>
+        · <a href="https://www.linkedin.com/in/nikita-deshmukh-36ab25197/">LinkedIn</a>
+        · <a href="https://github.com/Nikita-Deshmukh">GitHub</a>
+      </p>
+    </header>
+
+    <h2>Professional summary</h2>
+    <p>Cloud &amp; DevOps Engineer with 4+ years of experience designing, automating, and operating cloud-native platforms across AWS and Red Hat OpenShift. Skilled in Kubernetes, Terraform, Infrastructure as Code, CI/CD, Docker, observability, DevSecOps, AWS infrastructure, and PostgreSQL. Experienced in SRE practices and production incident response, with a focus on reliability, GDPR-aligned security controls, cost optimization, and AI-driven operational automation.</p>
+
+    <h2>Experience</h2>
+    <h3>Software Engineer I · Volkswagen Group Digital Solutions India, Pune</h3>
+    <div class="row"><span>Lastenheftassistant (LHA) — AI-powered requirements engineering</span><span>Aug 2022 – Present</span></div>
+    <ul>
+      <li>Designed and maintained Helm-based Kubernetes deployments across dev/test/staging/production with parameterized configs and zero-downtime releases.</li>
+      <li>Built multi-stage Docker images for Python and Node.js with OpenShift-compliant security, non-root execution, and Docker Compose for local multi-container work.</li>
+      <li>Automated Aurora PostgreSQL schema migrations with Alembic and Kubernetes Jobs.</li>
+      <li>Maintained GitHub Actions CI/CD with SonarQube quality gates, Black Duck scanning, staging deploys, and production approvals.</li>
+      <li>Operated Prometheus, Grafana, Loki, Tempo, and OpenTelemetry for monitoring, logs, tracing, and alerting.</li>
+      <li>Supported production incident triage and RCA using SRE practices; managed TLS, OpenShift secrets, and GDPR-aligned data protection.</li>
+      <li>Enforced outbound security with proxy whitelist and domain-based egress controls.</li>
+      <li>Reduced project costs 35–40% through optimized pod configuration and scheduling; leading LHA migration from OpenShift to AWS-native.</li>
+      <li>Built LLM workflows to correlate infrastructure events, pod failures, and application logs for faster RCA.</li>
+    </ul>
+    <h3>Core AWS infrastructure &amp; platform engineering</h3>
+    <ul>
+      <li>Provisioned EC2, custom VPCs, private subnets, NAT, NACLs, ALB, autoscaling, IAM, and S3 with Terraform modules.</li>
+      <li>Deployed containerized applications on Amazon ECS with images in ECR; CloudWatch alarms and dashboards for incident response.</li>
+      <li>Designed a serverless AVA chatbot on Lambda and ALB, cutting infrastructure costs 60–70%.</li>
+    </ul>
+    <h3>Hackathon projects</h3>
+    <ul>
+      <li>AI assistant for automotive PFMEA risk rating (i.mobilithon 5.0).</li>
+      <li>Automated automotive part-specification comparison with Python and OpenCV (i.mobilithon 4.0 — Second Runner-up).</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <p class="chips">AWS · Azure · OpenShift · Kubernetes · EKS · Helm · Docker · Terraform · GitHub Actions · Jenkins · Prometheus · Grafana · Loki · Tempo · CloudWatch · SonarQube · Black Duck · Trivy · IAM · RBAC · OIDC · Aurora PostgreSQL · DynamoDB · Alembic · Python · Bash · Git · AIOps / GenAI</p>
+
+    <h2>Education</h2>
+    <div class="row"><strong>Bachelor of Engineering, Pune University — 9.52 CGPA</strong><span>Aug 2018 – May 2022</span></div>
+
+    <h2>Awards &amp; training</h2>
+    <ul>
+      <li>i.mobilithon 4.0 — Second Runner-up, Volkswagen Group Innovation Hackathon (Oct–Dec 2024).</li>
+      <li>OpenShift with Kubernetes, VW Group internal training; on-site visit to Shanghai, China.</li>
+    </ul>
+
+    <h2>Languages</h2>
+    <p>English and German (A2)</p>
+  </main>
+</body>
+</html>
